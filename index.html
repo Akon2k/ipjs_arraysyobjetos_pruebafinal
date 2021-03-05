@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parcel Sandbox</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+    />
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="poke-nav py-2 px-5">
+      <img
+        class="h-100"
+        src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+        alt="PokeAPI"
+      />
+    </nav>
+    <header class="py-4" style="text-align: center">
+      <h1 class="display-7 green">PokeDex - PokeAPI</h1>
+    </header>
+
+    <section>
+      <label for="">Escriba un pokemon: </label>
+      <input id="inputPoke" type="text" />
+      <button id="buscarPoke">Buscar</button>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <section id="Selector-Poke">
+            <h5><strong>Selecciona tu Pokemon</strong></h5>
+            <hr />
+            <!-- <label>Seleccione un Pokemon: </label> -->
+            <select id="selectPoke">
+              <option value="">Seleccione</option>
+            </select>
+            <hr />
+            <br />
+            <h2 id="nombrePoke"></h2>
+            <img id="imgPokeFront" />
+            <img id="imgPokeBack" />
+          </section>
+        </div>
+
+        <div class="col-3">
+          <section id="Datos-Poke">
+            <h5><strong>Datos Pokemon</strong></h5>
+            <hr />
+            <p>
+              # PokeDex: <strong><span id="idPoke"></span></strong>
+            </p>
+            <p>
+              Tipo Principal: <strong><span id="tipoPoke"></span></strong>
+            </p>
+            <p>
+              Habitat: <strong><span id="habitatPoke"></span></strong>
+            </p>
+            <p>
+              Habilidad 1: <strong><span id="habilidad1Poke"></span></strong>
+            </p>
+            <p>
+              Habilidad 2: <strong><span id="habilidad2Poke"></span></strong>
+            </p>
+            <p>
+              Habilidad 3: <strong><span id="habilidad3Poke"></span></strong>
+            </p>
+          </section>
+        </div>
+
+        <div class="col-3">
+          <section id="Estadisticas-Poke">
+            <h5><strong>Estadisticas Pokemon</strong></h5>
+            <hr />
+            <p>
+              Ataque: <strong><span id="ataquePoke"></span></strong>
+            </p>
+            <p>
+              Ataque Especial:
+              <strong><span id="ataqueespecialpoke"></span></strong>
+            </p>
+            <p>
+              Defensa: <strong><span id="defensapoke"></span></strong>
+            </p>
+            <p>
+              Defensa Especial:
+              <strong><span id="defensaespecialpoke"></span></strong>
+            </p>
+            <p>
+              Puntos de Salud: <strong><span id="saludpoke"></span></strong>
+            </p>
+            <p>
+              Velocidad: <strong><span id="velocidadpoke"></span></strong>
+            </p>
+          </section>
+        </div>
+
+        <div class="col-3">
+          <section id="Grafico-Poke">
+            <strong>Gráfica de Estadísticas</strong>
+            <hr />
+            <canvas id="graficopoke"></canvas>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="assets\js\index.js"></script>
+  </body>
+</html>
