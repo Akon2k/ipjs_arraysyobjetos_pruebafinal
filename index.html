@@ -34,26 +34,29 @@
         alt="PokeAPI"
       />
     </nav>
-    <header class="pb-5" style="text-align: center">
-      <a href="#"
-        ><img
-          src="https://fontmeme.com/permalink/210306/2697eceff531b40fbe468ab2983685ee.png"
-          alt="fuente-pokemon"
-          height="100%"
-          border="0"
-      /></a>
-      <!-- <h1 class="display-7 green">PokeDex</h1> -->
-    </header>
+    <div class="container" style="border: 1px solid">
+      <header class="py-3" style="border: 1px solid; text-align: center">
+        <a href="#"
+          ><img
+            src="https://fontmeme.com/permalink/210306/2697eceff531b40fbe468ab2983685ee.png"
+            alt="fuente-pokemon"
+            height="100%"
+            border="0"
+        /></a>
+        <!-- <h1 class="display-7 green">PokeDex</h1> -->
+      </header>
 
-    <!-- <section>
+      <!-- <section>
       <label for="">Escriba un pokemon: </label>
       <input id="inputPoke" type="text" />
       <button id="buscarPoke">Buscar</button>
     </section> -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
+      <div class="row" style="border: 1px solid">
+        <div
+          class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-2"
+          style="border: 1px solid"
+        >
           <section id="Selector-Poke">
             <h5><strong>Selecciona tu Pokémon</strong></h5>
             <hr />
@@ -62,15 +65,30 @@
               <option value="">Seleccione</option>
             </select>
             <hr />
-            <div class="text-center pt-4">
-              <h2 id="nombrePoke"></h2>
-              <img id="imgPokeFront" />
-              <img id="imgPokeBack" />
+            <div class="row text-center">
+              <div class="col-12">
+                <h2 id="nombrePoke"></h2>
+              </div>
+              <div class="col-6">
+                <img
+                  id="imgPokeFront"
+                  style="max-height: 100%; max-width: 100%"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  id="imgPokeBack"
+                  style="max-height: 100%; max-width: 100%"
+                />
+              </div>
             </div>
           </section>
         </div>
 
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
+        <div
+          class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-2"
+          style="border: 1px solid"
+        >
           <section id="Datos-Poke">
             <h5><strong>Poké-Datos</strong></h5>
             <hr />
@@ -95,7 +113,10 @@
           </section>
         </div>
 
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
+        <div
+          class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-2"
+          style="border: 1px solid"
+        >
           <section id="Estadisticas-Poke">
             <h5><strong>Poké-Estadísticas</strong></h5>
             <hr />
@@ -122,15 +143,21 @@
           </section>
         </div>
 
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
+        <div
+          class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2"
+          style="border: 1px solid"
+        >
           <section id="Grafico-Poke">
             <h5><strong>PoKe-Grafico de Habilidad</strong></h5>
             <hr />
-            <canvas id="graficopoke"></canvas>
+            <div>
+              <canvas id="graficopoke" style="max-height: 100%; max-width: 100%"></canvas>
+            </div>
           </section>
         </div>
+        <!-- <canvas id="graficopoke"></canvas> -->
         <hr />
-        <div style="text-align: center" class="py-5">
+        <div style="border: 1px solid; text-align: center" class="py-2">
           <img
             src="/assets/img/run-pika-run.gif"
             alt="run_pica_run"

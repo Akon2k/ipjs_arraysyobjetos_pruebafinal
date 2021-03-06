@@ -142,12 +142,13 @@ $("document").ready(function () {
           },
           options: {
             responsive: true,
-            /* scale: {
+            aspectRatio: 1,
+             scale: {
               ticks: {
                 suggestedMin: 0,
-                suggestedMax: 200,
+                suggestedMax: 100,
               },
-            }, */
+            },
           },
         });
       },
