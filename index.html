@@ -27,15 +27,22 @@
   </head>
 
   <body>
-    <nav class="poke-nav py-2 px-5">
+    <nav class="poke-nav px-5 py-5">
       <img
         class="h-100"
         src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
         alt="PokeAPI"
       />
     </nav>
-    <header class="py-4" style="text-align: center">
-      <h1 class="display-7 green">PokeDex - PokeAPI</h1>
+    <header class="pb-5" style="text-align: center">
+      <a href="#"
+        ><img
+          src="https://fontmeme.com/permalink/210306/2697eceff531b40fbe468ab2983685ee.png"
+          alt="fuente-pokemon"
+          height="100%"
+          border="0"
+      /></a>
+      <!-- <h1 class="display-7 green">PokeDex</h1> -->
     </header>
 
     <!-- <section>
@@ -46,28 +53,29 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
           <section id="Selector-Poke">
-            <h5><strong>Selecciona tu Pokemon</strong></h5>
+            <h5><strong>Selecciona tu Pokémon</strong></h5>
             <hr />
             <!-- <label>Seleccione un Pokemon: </label> -->
-            <select id="selectPoke">
+            <select id="selectPoke" style="width: 100%">
               <option value="">Seleccione</option>
             </select>
             <hr />
-            <br />
-            <h2 id="nombrePoke"></h2>
-            <img id="imgPokeFront" />
-            <img id="imgPokeBack" />
+            <div class="text-center pt-4">
+              <h2 id="nombrePoke"></h2>
+              <img id="imgPokeFront" />
+              <img id="imgPokeBack" />
+            </div>
           </section>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
           <section id="Datos-Poke">
-            <h5><strong>Datos Pokemon</strong></h5>
+            <h5><strong>Poké-Datos</strong></h5>
             <hr />
             <p>
-              # PokeDex: <strong><span id="idPoke"></span></strong>
+              #PokeDex: <strong><span id="idPoke"></span></strong>
             </p>
             <p>
               Tipo Principal: <strong><span id="tipoPoke"></span></strong>
@@ -87,9 +95,9 @@
           </section>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
           <section id="Estadisticas-Poke">
-            <h5><strong>Estadisticas Pokemon</strong></h5>
+            <h5><strong>Poké-Estadísticas</strong></h5>
             <hr />
             <p>
               Ataque: <strong><span id="ataquePoke"></span></strong>
@@ -114,12 +122,21 @@
           </section>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-2">
           <section id="Grafico-Poke">
-            <strong>Gráfica de Estadísticas</strong>
+            <h5><strong>PoKe-Grafico de Habilidad</strong></h5>
             <hr />
             <canvas id="graficopoke"></canvas>
           </section>
+        </div>
+        <hr />
+        <div style="text-align: center" class="py-5">
+          <img
+            src="/assets/img/run-pika-run.gif"
+            alt="run_pica_run"
+            height="100px"
+            width="150px"
+          />
         </div>
       </div>
     </div>

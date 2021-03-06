@@ -98,14 +98,14 @@ $("document").ready(function () {
         var defensaespecial_poke = data.stats[1].base_stat;
         var velocidad_poke = data.stats[0].base_stat;
 
-        $("#saludpoke").html(salud_poke);
-        $("#ataquePoke").html(ataque_Poke);
-        $("#ataqueespecialpoke").html(ataqueespecial_poke);
-        $("#defensapoke").html(defensa_poke);
-        $("#defensaespecialpoke").html(defensaespecial_poke);
-        $("#velocidadpoke").html(velocidad_poke);
+        $("#saludpoke").html(`${salud_poke} pts.`);
+        $("#ataquePoke").html(`${ataque_Poke} pts.`);
+        $("#ataqueespecialpoke").html(`${ataqueespecial_poke} pts.`);
+        $("#defensapoke").html(`${defensa_poke} pts.`);
+        $("#defensaespecialpoke").html(`${defensaespecial_poke} pts.`);
+        $("#velocidadpoke").html(`${velocidad_poke} pts.`);
 
-        var poke_stats_value = [
+        var valor_estad_poke = [
           salud_poke,
           ataque_Poke,
           ataqueespecial_poke,
@@ -114,7 +114,7 @@ $("document").ready(function () {
           velocidad_poke,
         ];
 
-        var poke_stats_name = [
+        var nom_estad_poke = [
           "Salud",
           "Ataque",
           "Ataque Especial",
@@ -129,23 +129,25 @@ $("document").ready(function () {
         var pokeGraph = new Chart(ctx, {
           type: "radar",
           data: {
-            labels: poke_stats_name,
+            labels: nom_estad_poke,
             datasets: [
               {
-                data: poke_stats_value,
+                data: valor_estad_poke,
                 label: nombrePoke,
-                backgroundColor: "rgba(239, 83, 80, 0.25)",
-                borderColor: "rgba(239, 83, 80, 0.5)",
+                backgroundColor: "rgba(34, 98, 33, 0.5)",
+                /* backgroundColor: ["#42a5f5", "red", "green", "blue", "violet"], */
+                borderColor: "rgba(83, 239, 80, 0.5)",
               },
             ],
           },
           options: {
-            scale: {
+            responsive: true,
+            /* scale: {
               ticks: {
                 suggestedMin: 0,
                 suggestedMax: 200,
               },
-            },
+            }, */
           },
         });
       },
